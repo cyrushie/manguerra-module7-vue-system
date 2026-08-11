@@ -99,8 +99,8 @@ stands in for the data layer while the system is still in the design stage.
 
 ## Application Screenshots
 
-Screenshots are collected in the submission PDF report. Replace the placeholders
-below with captures taken from the running application.
+The following screenshots are stored in the `screenshots/` folder and are also
+collected in the submission PDF report.
 
 - `screenshots/01-running-application.png`
 - `screenshots/02-add-record.png`
