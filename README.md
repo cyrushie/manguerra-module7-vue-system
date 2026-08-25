@@ -114,6 +114,69 @@ collected in the submission PDF report.
 - `screenshots/10-commit-history.png`
 - `screenshots/11-ci-success.png`
 
+## Module 8 — Software Testing
+
+This section covers the Module 8 activity: manual and automated testing of the
+Attendance Monitoring System.
+
+### Testing Commands
+
+```bash
+npm run test:run    # Run all Vitest tests once
+npm run test        # Run tests in watch mode
+npm run build       # Production build
+```
+
+### Automated Tests
+
+| Test File | Description | Tests |
+| --- | --- | --- |
+| `src/utils/filterRecords.test.js` | Tests the search/filter utility function (10 cases) | Equivalence, boundary, case-insensitive |
+| `src/components/RecordCount.test.js` | Tests the RecordCount component (3 cases) | Plural/singular forms, zero count |
+
+Total: **13 automated tests** — all passing.
+
+### Manual Test Cases
+
+12 manual test cases cover: Add, Validation, Boundary, Multiple Records, Edit,
+Delete (Cancel), Delete (Confirm), Search, No-Results, Persistence, Responsive,
+and Record Count. See `docs/testing/test-cases.md` for full details.
+
+### Defect Found and Fixed
+
+**BUG-01:** Search term was not cleared when entering edit mode, causing the
+record list to remain filtered during editing. Fixed by clearing `searchTerm`
+in the `startEdit` function.
+
+- Defect report: `docs/testing/defect-report.md`
+- Retest: Pass
+- Regression: All related test cases pass
+
+### Test Documentation
+
+- `docs/testing/test-plan.md` — Complete test plan
+- `docs/testing/test-cases.md` — 12 manual test cases with results
+- `docs/testing/defect-report.md` — Bug report and fix evidence
+
+### CI Pipeline
+
+GitHub Actions runs `npm ci`, `npm run test:run`, and `npm run build` on every
+push and pull request to `main`.
+
+### Testing Screenshots
+
+- `screenshots/01-system-before-testing.png`
+- `screenshots/02-manual-test-cases.png`
+- `screenshots/03-failed-test-or-defect.png`
+- `screenshots/04-defect-report.png`
+- `screenshots/05-vitest-installed.png`
+- `screenshots/06-automated-test-code.png`
+- `screenshots/07-tests-passing.png`
+- `screenshots/08-defect-fixed.png`
+- `screenshots/09-retest-regression.png`
+- `screenshots/10-commit-history.png`
+- `screenshots/11-ci-success.png`
+
 ## Known Limitations and Future Improvements
 
 - Data is stored only in the browser and is not shared between devices.

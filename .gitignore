@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+Module_8_Software_Testing_Lesson_and_Activity.pdf
 
 # Editor directories and files
 .vscode/*
