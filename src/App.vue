@@ -48,6 +48,7 @@ function handleSave(formData) {
 
 function startEdit(id) {
   editingId.value = id
+  searchTerm.value = ''
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
